@@ -23,19 +23,19 @@ class App extends Component {
   </Breadcrumb>
   <Carousel>
   <Carousel.Item>
-  <img className ="d-block w-100" src="https://fossbytes.com/wp-content/uploads/2018/01/Best-Android-Apps-List-fossbytes.jpg"/>
+  <img className ="d-block w-100" src="https://fossbytes.com/wp-content/uploads/2018/01/Best-Android-Apps-List-fossbytes.jpg" alt="android1"/>
   <Carousel.Caption>
   <h3>Social Media on Android</h3>
   </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
-  <img className ="d-block w-100" src="https://www.extremetech.com/wp-content/uploads/2017/04/business-android-640x353.jpg"/>
+  <img className ="d-block w-100" src="https://www.extremetech.com/wp-content/uploads/2017/04/business-android-640x353.jpg" alt="android2"/>
   <Carousel.Caption>
   <h3>Penggunaan Android dalam Berbagai Bidang</h3>
   </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
-  <img className ="d-block w-100" src="https://cnet2.cbsistatic.com/img/zUPPHHRkpU6kQTwKt1LNpHAMmSE=/2018/09/19/e708c963-ff8d-49ab-bc7f-2b122788e915/08-htc-t-mobile-g1-10-years-later.jpg"/>
+  <img className ="d-block w-100" src="https://cnet2.cbsistatic.com/img/zUPPHHRkpU6kQTwKt1LNpHAMmSE=/2018/09/19/e708c963-ff8d-49ab-bc7f-2b122788e915/08-htc-t-mobile-g1-10-years-later.jpg" alt="android3"/>
   <Carousel.Caption>
   <h3>Perkembangan Adroid dari Waktu ke Waktu</h3>
   </Carousel.Caption>
