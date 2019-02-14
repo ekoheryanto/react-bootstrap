@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Button, Container, Row, Col, Media, Navbar, Nav, FormControl, Form} from "react-bootstrap";
+import {Container, Row, Col, Media, Navbar, Nav, Alert, Badge, Breadcrumb, Button} from "react-bootstrap";
 
 
 class App extends Component {
@@ -9,17 +9,24 @@ class App extends Component {
     <Navbar bg="dark" variant="dark">
     <Navbar.Brand href="#home">Firmware Studio</Navbar.Brand>
     <Nav className="mr-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
+      <Nav.Link href="#">Home</Nav.Link>
+      <Nav.Link href="#">Seputar StartUp</Nav.Link>
+      <Nav.Link href="#">Tutorial Android</Nav.Link>
     </Nav>
-    <Form inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-info">Search</Button>
-    </Form>
-  </Navbar>
- <h1></h1>
+    </Navbar>
+    <Container>
+    <Row>
+    <Col>
+    <Alert variant="success">login anda berhasil !! </Alert>
+    </Col>
+    </Row>
+    </Container>
   <Container>
+  <Breadcrumb>
+  <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
+  <Breadcrumb.Item href="#">StartUp</Breadcrumb.Item>
+  <Breadcrumb.Item href="#">Android</Breadcrumb.Item>
+  </Breadcrumb>
   <Row>
     <Col>
     <Media>
@@ -31,14 +38,14 @@ class App extends Component {
       alt="Generic placeholder"
     />
     <Media.Body>
-      <h5>Judul Artikel</h5>
+      <h5>Investasi Besar-besaran <Badge pill variant="primary">StartUp</Badge></h5>
       <p>
         Isi dari artikelnya
       </p>
-
       <p>
         Ini juga isi dari artikel
       </p>
+      <Button variant="outline-warning">Baca Artikel</Button>
     </Media.Body>
   </Media>
     </Col>
@@ -51,23 +58,23 @@ class App extends Component {
       alt="Generic placeholder"
     />
     <Media.Body>
-      <h5>Judul Artikel</h5>
+      <h5>RecyclerView Tutorial <Badge pill variant="success">Android</Badge></h5>
       <p>
         Isi dari artikelnya
       </p>
-
       <p>
         Ini juga isi dari artikel
       </p>
+      <Button variant="outline-warning">Baca Artikel</Button>
     </Media.Body>
   </Media>
   </Col>
   </Row>
   </Container>
-
       </div>
     );
   }
+
 }
 
 export default App;
