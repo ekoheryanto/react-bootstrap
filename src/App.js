@@ -1,26 +1,39 @@
 import React, { Component } from 'react';
-import {Container, Row, Col, Media, Navbar, Nav, Alert, Badge, Breadcrumb, Button, ButtonGroup, Card, Carousel} from "react-bootstrap";
+import {Container, Row, Col, Media, Navbar, Nav, Alert, Badge, Breadcrumb, Button,
+  ButtonGroup, Card, Carousel, Dropdown, Form, InputGroup, Jumbotron, FormControl, Pagination} from "react-bootstrap";
 
 
 class App extends Component {
   render() {
     return (
       <div>
-    <Navbar bg="dark" variant="dark">
-    <Navbar.Brand href="#home">Firmware Studio</Navbar.Brand>
-    <Nav className="mr-auto">
-      <Nav.Link href="#">Seputar StartUp</Nav.Link>
-      <Nav.Link href="#">Tutorial Android</Nav.Link>
-      <Nav.Link href="#">Login</Nav.Link>
-    </Nav>
-    </Navbar>
   <Container>
+  <Navbar bg="dark" variant="dark">
+  <Navbar.Brand href="#home">Firmware Studio</Navbar.Brand>
+  <Nav>
+    <Nav.Item><Nav.Link href="#">Seputar StartUp</Nav.Link></Nav.Item>
+    <Nav.Item><Nav.Link href="#">Tutorial Android</Nav.Link></Nav.Item>
+    <Nav.Item><Nav.Link href="#">Login</Nav.Link></Nav.Item>
+  </Nav>
+  </Navbar>
+  <br/>
   <Alert variant="success">login anda berhasil !! </Alert>
   <Breadcrumb>
   <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
   <Breadcrumb.Item href="#">StartUp</Breadcrumb.Item>
   <Breadcrumb.Item href="#">Android</Breadcrumb.Item>
   </Breadcrumb>
+  <Dropdown>
+  <Dropdown.Toggle variant="warning" id="dropdown-basic">
+  Pilih Kategory
+  </Dropdown.Toggle>
+  <Dropdown.Menu>
+  <Dropdown.Item href="#">Tutorial</Dropdown.Item>
+  <Dropdown.Item href="#">StartUp</Dropdown.Item>
+  <Dropdown.Item href="#">Android</Dropdown.Item>
+  </Dropdown.Menu>
+  </Dropdown>
+  <br/>
   <Carousel>
   <Carousel.Item>
   <img className ="d-block w-100" src="https://fossbytes.com/wp-content/uploads/2018/01/Best-Android-Apps-List-fossbytes.jpg" alt="android1"/>
@@ -119,6 +132,48 @@ class App extends Component {
     </Col>
   </Row>
   <br/>
+  <Jumbotron>
+  <Container>
+  <h1>Firmware Studio</h1>
+  <p>Web Developer & Mobile Developer</p>
+  <Button variant="warning">Selengkapnya</Button>
+  </Container>
+  </Jumbotron>
+  <Row>
+  <Col>
+  <Form>
+  <Form.Group>
+  <Form.Label>Nama</Form.Label>
+  <Form.Control type="text" placeholder="Masukan Nama Anda"/>
+  </Form.Group>
+  <Form.Group>
+  <Form.Label>E-mail</Form.Label>
+  <Form.Control type="email" placeholder="Masukan Alamat e-mail Anda"/>
+  <Form.Text className="text-muted">Alamat e-mail anda akan kami jaga kerahasiaannya</Form.Text>
+  </Form.Group>
+  <Form.Group>
+  <Form.Label>Password</Form.Label>
+  <Form.Control type="password" placeholder="Password"/>
+  </Form.Group>
+  <Form.Group>
+  <Form.Check type="checkbox" label="Saya Setuju"/>
+  </Form.Group>
+  <Button type="submit">Submit</Button>
+  </Form>
+  </Col>
+  <Col>
+  {
+    //<Image src="https://www.extremetech.com/wp-content/uploads/2017/04/business-android-640x353.jpg" roundedCircle/>
+  }
+  <InputGroup className="mb-3">
+  <InputGroup.Prepend>
+  <InputGroup.Text>@</InputGroup.Text>
+  </InputGroup.Prepend>
+  <FormControl type="text" placeholder="Username"/>
+  </InputGroup>
+  </Col>
+  </Row>
+  <br/>
   <ButtonGroup className="mr-2">
     <Button>1</Button>
     <Button>2</Button>
@@ -131,6 +186,18 @@ class App extends Component {
     <Button>9</Button>
     <Button>10</Button>
   </ButtonGroup>
+ <Pagination>
+ <Pagination.Item>1</Pagination.Item>
+ <Pagination.Item>2</Pagination.Item>
+ <Pagination.Item>3</Pagination.Item>
+ <Pagination.Item>4</Pagination.Item>
+ <Pagination.Item>5</Pagination.Item>
+ <Pagination.Item active >6</Pagination.Item>
+ <Pagination.Item>7</Pagination.Item>
+ <Pagination.Item>8</Pagination.Item>
+ <Pagination.Item>9</Pagination.Item>
+ <Pagination.Item>10</Pagination.Item>
+ </Pagination>
   </Container>
       </div>
     );
