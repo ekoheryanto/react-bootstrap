@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
 import {Container, Row, Col, Media, Navbar, Nav, Alert, Badge, Breadcrumb, Button,
-  ButtonGroup, Card, Carousel, Dropdown, Form, InputGroup, Jumbotron, FormControl, Pagination} from "react-bootstrap";
+  ButtonGroup, Card, Carousel, Dropdown, Form, InputGroup, Jumbotron, FormControl, Pagination,
+ProgressBar, Tabs, Tab, Collapse} from "react-bootstrap";
 
 
 class App extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      buka : false
+    };
+  }
+
   render() {
     return (
       <div>
@@ -23,6 +31,7 @@ class App extends Component {
   <Breadcrumb.Item href="#">StartUp</Breadcrumb.Item>
   <Breadcrumb.Item href="#">Android</Breadcrumb.Item>
   </Breadcrumb>
+  <br/>
   <Dropdown>
   <Dropdown.Toggle variant="warning" id="dropdown-basic">
   Pilih Kategory
@@ -33,6 +42,18 @@ class App extends Component {
   <Dropdown.Item href="#">Android</Dropdown.Item>
   </Dropdown.Menu>
   </Dropdown>
+  <br/>
+  <Tabs defaultActiveKey="profile" >
+    <Tab eventKey="home" title="Home">
+      <p>Ini Halaman Home</p>
+    </Tab>
+    <Tab eventKey="profile" title="Profile">
+      <p>Ini Halaman Profile</p>
+    </Tab>
+    <Tab eventKey="contact" title="Contact">
+        <p>Ini Halaman Contact</p>
+    </Tab>
+  </Tabs>
   <br/>
   <Carousel>
   <Carousel.Item>
@@ -132,6 +153,8 @@ class App extends Component {
     </Col>
   </Row>
   <br/>
+  <ProgressBar animated now={89} label="89 % Mohon Tunggu ..."/>
+  <br/>
   <Jumbotron>
   <Container>
   <h1>Firmware Studio</h1>
@@ -171,6 +194,11 @@ class App extends Component {
   </InputGroup.Prepend>
   <FormControl type="text" placeholder="Username"/>
   </InputGroup>
+  <br/>
+  <Button variant="success" onClick={()=> this.setState({ buka : !this.state.buka})}>Silahkan Tekan</Button>
+  <Collapse in={this.state.buka}>
+  <p>Isi dari informasinya adalah ini, silahkan tekan lagi dan terus menerus sampai tangan anda pegel</p>
+  </Collapse>
   </Col>
   </Row>
   <br/>
@@ -186,6 +214,7 @@ class App extends Component {
     <Button>9</Button>
     <Button>10</Button>
   </ButtonGroup>
+  <br/> <br/>
  <Pagination>
  <Pagination.Item>1</Pagination.Item>
  <Pagination.Item>2</Pagination.Item>
